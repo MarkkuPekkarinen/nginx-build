@@ -15,7 +15,7 @@
 
  * [nginx](https://nginx.org/)
  * [OpenResty](https://openresty.org/)
- * [Tengine](http://tengine.taobao.org/)
+ * [Tengine](https://tengine.taobao.org/)
 
 ## Installation
 
@@ -189,12 +189,10 @@ $ nginx-build -d work -libressl
 `-libresslversion` is an option to set a version of LibreSSL.
 
 ```bash
-$ nginx-build -d work -libressl -libresslversion=2.5.4
+$ nginx-build -d work -libressl -libresslversion=2.9.2
 ```
 
-Sometimes an error occurs when downloading the source code. Please refer to the following [PR](https://github.com/cubicdaiya/nginx-build/pull/25) for more information.
-Downloading the source code has been successful, so you do not have to worry about it.
-
+Known issue, the build with libressl fails on MacOSX.
 
 ### Embedding 3rd-party modules
 
@@ -292,10 +290,11 @@ If you don't install PCRE and OpenSSL on your system, it is required to add the 
 And there is the limitation for the support of OpenResty.
 `nginx-build` does not allow to use OpenResty's unique configure options directly.
 But you can use the common options of nginx and OpenResty directly.
+If you want to use OpenResty's unique configure option, [Configuration for building nginx](#configuration-for-building-nginx) is helpful.
 
 ## Build Tengine
 
-`nginx-build` supports to build [Tengine](http://tengine.taobao.org/).
+`nginx-build` supports to build [Tengine](https://tengine.taobao.org/).
 
 ```bash
 $ nginx-build -d work -tengine -openssl
@@ -303,6 +302,6 @@ $ nginx-build -d work -tengine -openssl
 
 If you don't install OpenSSL on your system, it is required to add the option `-openssl`.
 
-There is the limitation for the support of [Tengine](http://tengine.taobao.org/).
+There is the limitation for the support of [Tengine](https://tengine.taobao.org/).
 `nginx-build` does not allow to use Tengine's unique configure options directly.
 But you can use the common options of nginx and Tengine directly.

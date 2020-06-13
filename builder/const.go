@@ -2,25 +2,25 @@ package builder
 
 // nginx
 const (
-	NginxVersion           = "1.15.4"
+	NginxVersion           = "1.19.0"
 	NginxDownloadURLPrefix = "https://nginx.org/download"
 )
 
 // pcre
 const (
-	PcreVersion           = "8.42"
+	PcreVersion           = "8.44"
 	PcreDownloadURLPrefix = "https://ftp.pcre.org/pub/pcre"
 )
 
 // openssl
 const (
-	OpenSSLVersion           = "1.0.2p"
+	OpenSSLVersion           = "1.1.1g"
 	OpenSSLDownloadURLPrefix = "https://www.openssl.org/source"
 )
 
 // libressl
 const (
-	LibreSSLVersion           = "2.7.4"
+	LibreSSLVersion           = "3.0.2"
 	LibreSSLDownloadURLPrefix = "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL"
 )
 
@@ -32,14 +32,14 @@ const (
 
 // openResty
 const (
-	OpenRestyVersion           = "1.13.6.2"
+	OpenRestyVersion           = "1.15.8.3"
 	OpenRestyDownloadURLPrefix = "https://openresty.org/download"
 )
 
 // tengine
 const (
-	TengineVersion           = "2.2.2"
-	TengineDownloadURLPrefix = "http://tengine.taobao.org/download"
+	TengineVersion           = "2.3.2"
+	TengineDownloadURLPrefix = "https://tengine.taobao.org/download"
 )
 
 // component enumerations

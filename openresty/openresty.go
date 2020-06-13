@@ -2,11 +2,22 @@ package openresty
 
 import (
 	"math"
+	"regexp"
 	"strconv"
 	"strings"
 )
 
+var (
+	versionPattern *regexp.Regexp
+)
+
+func init() {
+	versionPattern = regexp.MustCompile(`([0-9]+)(\.[0-9]+)?(\.[0-9]+)?(\.[0-9]+)?`)
+}
+
 func Name(version string) string {
+	version = versionPattern.FindString(version)
+
 	numbers := strings.Split(version, ".")
 	size := len(numbers)
 	sum := 0

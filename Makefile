@@ -1,5 +1,6 @@
-VERSION=0.11.3
-TARGETS_NOVENDOR=$(shell glide novendor)
+VERSION=0.11.9
+
+export GO111MODULE=on
 
 nginx-build: *.go builder/*.go command/*.go configure/*.go module3rd/*.go openresty/*.go util/*.go
 	go build -ldflags '-X main.NginxBuildVersion=${VERSION}' -o $@
@@ -16,14 +17,11 @@ dist: build-cross
 build-example: nginx-build
 	./nginx-build -c config/configure.example -m config/modules.cfg.example -d work -clear
 
-bundle:
-	glide install
-
 check:
-	go test $(TARGETS_NOVENDOR)
+	go test ./...
 
 fmt:
-	@echo $(TARGETS_NOVENDOR) | xargs go fmt
+	go fmt ./...
 
 install:
 	install nginx-build /usr/local/bin/nginx-build
