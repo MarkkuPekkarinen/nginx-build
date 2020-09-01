@@ -2,7 +2,7 @@ package builder
 
 // nginx
 const (
-	NginxVersion           = "1.19.0"
+	NginxVersion           = "1.19.2"
 	NginxDownloadURLPrefix = "https://nginx.org/download"
 )
 
@@ -32,7 +32,7 @@ const (
 
 // openResty
 const (
-	OpenRestyVersion           = "1.15.8.3"
+	OpenRestyVersion           = "1.17.8.2"
 	OpenRestyDownloadURLPrefix = "https://openresty.org/download"
 )
 
